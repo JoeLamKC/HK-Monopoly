@@ -1,0 +1,81 @@
+﻿<Window x:Class="HKMonopoly.AppMode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HKMonopoly"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="AppMode" Height="384" Width="683">
+
+    <Window.Resources>
+        <Style x:Key="UD Digi Kyokasho NP-B">
+            <Setter Property="TextElement.FontFamily" Value="fonts/UDDigiKyokashoN-B.ttc"/>
+        </Style>
+        <Style x:Key="UD Digi Kyokasho N-R">
+            <Setter Property="TextElement.FontFamily" Value="fonts/UDDigiKyokashoN-R.ttc"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="452" VerticalAlignment="Top" Width="790" Source="Assets/AppModeBackGround.jpg" Margin="0,-44,-113,-53"/>
+        <Frame x:Name="AppModeFrame" Source="AppModeGameConsole.xaml" Height="275" Width="560" NavigationUIVisibility= "Hidden" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Grid x:Name="PlayerInfo" Height="70" Margin="0,265,-523,0" VerticalAlignment="Top" Width="220" HorizontalAlignment="Left" Opacity="0">
+            <Grid x:Name="PlayerOneInfoBox" Height="65" Margin="10,10,0,0" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Grid.Background>
+                <TextBlock x:Name="PlayerOneName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 1" VerticalAlignment="Top" FontSize="14" FontFamily="UD Digi Kyokasho NP-B"/>
+                <Border BorderBrush="#FFE20000" BorderThickness="1" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="200"/>
+                <TextBlock x:Name="PlayerOneAccount" HorizontalAlignment="Left" Margin="5,20,0,0" TextWrapping="Wrap" Text="Account :" VerticalAlignment="Top" FontSize="14" FontFamily="UD Digi Kyokasho NP-R"/>
+                <TextBlock x:Name="PlayerOneIncome" HorizontalAlignment="Left" Margin="6,40,0,0" TextWrapping="Wrap" Text="Income :" VerticalAlignment="Top" FontSize="14" FontFamily="UD Digi Kyokasho N-R"/>
+            </Grid>
+            <Grid x:Name="PlayerTwoInfoBox" Height="65" Margin="10,10,0,0" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Grid.Background>
+                <TextBlock x:Name="PlayerTwoName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 2" VerticalAlignment="Top" FontSize="14" FontFamily="UD Digi Kyokasho NP-B"/>
+                <Border BorderBrush="#FF9B289B" BorderThickness="1" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="200"/>
+                <TextBlock x:Name="PlayerTwoAccount" HorizontalAlignment="Left" Margin="5,20,0,0" TextWrapping="Wrap" Text="Account :" VerticalAlignment="Top" FontSize="14" FontFamily="UD Digi Kyokasho N-R"/>
+                <TextBlock x:Name="PlayerTwoIncome" HorizontalAlignment="Left" Margin="6,40,0,0" TextWrapping="Wrap" Text="Income :" VerticalAlignment="Top" FontSize="14" FontFamily="UD Digi Kyokasho N-R"/>
+            </Grid>
+            <Grid x:Name="PlayerThreeInfoBox" Height="65" Margin="10,10,0,0" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Grid.Background>
+                <TextBlock x:Name="PlayerThreeName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 3" VerticalAlignment="Top" FontSize="14" FontFamily="UD Digi Kyokasho NP-B"/>
+                <Border BorderBrush="#FF0655C9" BorderThickness="1" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="200"/>
+                <TextBlock x:Name="PlayerThreeAccount" HorizontalAlignment="Left" Margin="5,20,0,0" TextWrapping="Wrap" Text="Account :" VerticalAlignment="Top" FontSize="14" FontFamily="UD Digi Kyokasho N-R"/>
+                <TextBlock x:Name="PlayerThreeIncome" HorizontalAlignment="Left" Margin="6,40,0,0" TextWrapping="Wrap" Text="Income :" VerticalAlignment="Top" FontSize="14" FontFamily="UD Digi Kyokasho N-R"/>
+            </Grid>
+            <Grid x:Name="PlayerFourInfoBox" Height="65" Margin="10,10,0,0" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Grid.Background>
+                <TextBlock x:Name="PlayerFourName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 4" VerticalAlignment="Top" FontSize="14" FontFamily="UD Digi Kyokasho NP-B"/>
+                <Border BorderBrush="#FF37C900" BorderThickness="1" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="200"/>
+                <TextBlock x:Name="PlayerFourAccount" HorizontalAlignment="Left" Margin="5,20,0,0" TextWrapping="Wrap" Text="Account :" VerticalAlignment="Top" FontSize="14" FontFamily="UD Digi Kyokasho N-R"/>
+                <TextBlock x:Name="PlayerFourIncome" HorizontalAlignment="Left" Margin="6,40,0,0" TextWrapping="Wrap" Text="Income :" VerticalAlignment="Top" FontSize="14" FontFamily="UD Digi Kyokasho N-R"/>
+            </Grid>
+        </Grid>
+        <Button x:Name="DiceButtonAPP" Content="" HorizontalAlignment="Left" Margin="578,207,0,0" VerticalAlignment="Top" Width="89" Height="97" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="DiceButtonAPP_Click" Opacity="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/HKMonopoly;component/Assets/DiceIcon.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="YesButtonAPP" Content="" HorizontalAlignment="Left" Margin="592,40,0,0" VerticalAlignment="Top" Width="60" Height="56" IsEnabled="False" Click="YesButtonAPP_Click" BorderBrush="{x:Null}" Opacity="0">
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/Tick.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="NoButtonAPP" Content="" HorizontalAlignment="Left" Margin="592,109,0,0" VerticalAlignment="Top" Width="60" Height="55" IsEnabled="False" Click="NoButtonAPP_Click" Opacity="0" BorderBrush="{x:Null}" Foreground="#FF7E7E7E">
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/Cross.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="DiceResultBlockAPP" HorizontalAlignment="Left" Margin="610,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="36" Foreground="Black" FontFamily="UD Digi Kyokasho NP-B" RenderTransformOrigin="0.605,0.437"/>
+        <TextBlock x:Name="GUIAnnouncementAPP" HorizontalAlignment="Left" Margin="224,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Height="68" Width="336" Foreground="Black" FontFamily="UD Digi Kyokasho N-R"/>
+        <TextBlock x:Name="TurnNumberBlockAPP" HorizontalAlignment="Left" Margin="565,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Text="Turn: 0/60" Height="24" Width="89" TextAlignment="Right" Opacity="0" Foreground="Black" FontFamily="UD Digi Kyokasho N-R"/>
+        <TextBlock x:Name="RobText" HorizontalAlignment="Left" Margin="578,171,0,0" TextWrapping="Wrap" Text="Rob!" VerticalAlignment="Top" Height="32" Width="82" FontSize="22" FontFamily="UD Digi Kyokasho NP-B" TextAlignment="Center" Opacity="0"/>
+    </Grid>
+</Window>

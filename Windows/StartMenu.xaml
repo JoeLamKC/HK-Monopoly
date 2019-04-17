@@ -1,0 +1,37 @@
+﻿<Page x:Class="HKMonopoly.StartMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HKMonopoly"
+      mc:Ignorable="d" 
+      d:DesignHeight="730" d:DesignWidth="1350"
+      Title="StartMenu"
+      PreviewMouseLeftButtonDown="StartMenu_PreviewMouseLeftButtonDown">
+    
+    <Page.Resources>
+        <Style x:Key="UD Digi Kyokasho NP-B">
+            <Setter Property="TextElement.FontFamily" Value="fonts/UDDigiKyokashoN-B.ttc"/>
+        </Style>
+        <Style x:Key="UD Digi Kyokasho N-R">
+            <Setter Property="TextElement.FontFamily" Value="fonts/UDDigiKyokashoN-R.ttc"/>
+        </Style>
+    </Page.Resources>
+    
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="834" VerticalAlignment="Top" Width="1350" Source="/HKMonopoly;component/Assets/blur.png" Focusable="True" IsHitTestVisible="False" Margin="0,0,0,-104"/>
+        <TextBlock x:Name="startGameText" Margin="334,290,0,0" TextWrapping="Wrap" Text="Tap to Start" VerticalAlignment="Top" Height="77" Width="587" FontSize="48" Foreground="#FF1F1F1F" HorizontalAlignment="Left" TextAlignment="Center" FontFamily="UD Digi Kyokasho NP-B"/>
+
+
+
+        <Grid x:Name="NumberOfPlayerGrid" HorizontalAlignment="Left" Height="196" Margin="388,299,0,0" VerticalAlignment="Top" Width="487" Opacity="0">
+
+            <Button x:Name="Choose2" Content="2" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" Width="135" Height="77" FontSize="42" Background="{x:Null}" BorderBrush="#FF3286FF" Foreground="Black" Click="Choose2_Click" IsEnabled="False"/>
+            <Button x:Name="Choose3" Content="3" HorizontalAlignment="Left" Margin="171,79,0,0" VerticalAlignment="Top" Width="135" Height="77" FontSize="42" Background="{x:Null}" BorderBrush="#FF5EFF45" Click="Choose3_Click" IsEnabled="False"/>
+            <Button x:Name="Choose4" Content="4" HorizontalAlignment="Left" Margin="342,79,0,0" VerticalAlignment="Top" Width="135" Height="77" FontSize="42" Background="{x:Null}" BorderBrush="#FFFF1E1E" Click="Choose4_Click" IsEnabled="False"/>
+            <TextBlock x:Name="NumberOfPlayerTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Number of players" VerticalAlignment="Top" Height="53" Width="487" FontSize="36" TextAlignment="Center" FontFamily="UD Digi Kyokasho NP-B"/>
+        </Grid>
+
+
+    </Grid>
+</Page>

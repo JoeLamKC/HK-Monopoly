@@ -1,0 +1,105 @@
+﻿<Page x:Class="HKMonopoly.MainGame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HKMonopoly"
+      mc:Ignorable="d" 
+      d:DesignHeight="730" d:DesignWidth="1350"
+      Title="MainGame">
+    <Page.Resources>
+        <Style x:Key="UD Digi Kyokasho NP-B">
+            <Setter Property="TextElement.FontFamily" Value="fonts/UDDigiKyokashoN-B.ttc"/>
+        </Style>
+        <Style x:Key="UD Digi Kyokasho N-R">
+            <Setter Property="TextElement.FontFamily" Value="fonts/UDDigiKyokashoN-R.ttc"/>
+        </Style>
+    </Page.Resources>
+
+
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="806" Margin="0,0,-27,-76" VerticalAlignment="Top" Width="1377" Source="/HKMonopoly;component/Assets/MTRMAP.jpg"/>
+
+        <Frame x:Name= "MainFrame" NavigationUIVisibility= "Hidden"/>
+
+        <Image x:Name="BackGroundImage" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="1350" Source="/HKMonopoly;component/Assets/MTRMAP.jpg" Margin="0,0,0,-28"/>
+        <Image x:Name="BlurBackground" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="1350" Source="/HKMonopoly;component/Assets/blur.png" Opacity="0"/>
+        <Grid x:Name="PlayerInfo" Height="150" Margin="0,580,0,0" VerticalAlignment="Top" Width="1200" HorizontalAlignment="Left">
+            <Grid x:Name="PlayerOneInfoBox" Height="130" Margin="10,10,0,0" Width="280" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Grid.Background>
+                <TextBlock x:Name="PlayerOneName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 1" VerticalAlignment="Top" FontSize="24" FontFamily="UD Digi Kyokasho NP-B"/>
+                <Border BorderBrush="#FFE20000" BorderThickness="1" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="280"/>
+                <TextBlock x:Name="PlayerOneAccount" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Account :" VerticalAlignment="Top" FontSize="24" FontFamily="UD Digi Kyokasho N-R"/>
+                <TextBlock x:Name="PlayerOneIncome" HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="Income :" VerticalAlignment="Top" FontSize="24" FontFamily="UD Digi Kyokasho N-R"/>
+                <Image x:Name="PlayerOneFail" HorizontalAlignment="Left" Height="130" Margin="38,0,0,0" VerticalAlignment="Top" Width="198" Source="/HKMonopoly;component/Assets/FailIcon.png" Opacity="0"/>
+            </Grid>
+            <Grid x:Name="PlayerTwoInfoBox" Height="130" Margin="310,10,0,0" Width="280" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Grid.Background>
+                <TextBlock x:Name="PlayerTwoName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player2" VerticalAlignment="Top" FontSize="24" RenderTransformOrigin="0.291,0.131" FontFamily="UD Digi Kyokasho NP-B"/>
+                <Border BorderBrush="#FF9B289B" BorderThickness="1" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="280"/>
+                <TextBlock x:Name="PlayerTwoAccount" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Account :" VerticalAlignment="Top" FontSize="24" FontFamily="UD Digi Kyokasho N-R"/>
+                <TextBlock x:Name="PlayerTwoIncome" HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="Income :" VerticalAlignment="Top" FontSize="24" FontFamily="UD Digi Kyokasho N-R"/>
+                <Image x:Name="PlayerTwoFail" HorizontalAlignment="Left" Height="130" Margin="38,0,0,0" VerticalAlignment="Top" Width="198" Source="/HKMonopoly;component/Assets/FailIcon.png" Opacity="0"/>
+            </Grid>
+            <Grid x:Name="PlayerThreeInfoBox" Height="130" Margin="610                   ,10,0,0" Width="280" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Grid.Background>
+                <TextBlock x:Name="PlayerThreeName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 3" VerticalAlignment="Top" FontSize="24" FontFamily="UD Digi Kyokasho NP-B"/>
+                <Border BorderBrush="#FF0655C9" BorderThickness="1" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="280"/>
+                <TextBlock x:Name="PlayerThreeAccount" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Account :" VerticalAlignment="Top" FontSize="24" FontFamily="UD Digi Kyokasho N-R"/>
+                <TextBlock x:Name="PlayerThreeIncome" HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="Income :" VerticalAlignment="Top" FontSize="24" FontFamily="UD Digi Kyokasho N-R"/>
+                <Image x:Name="PlayerThreeFail" HorizontalAlignment="Left" Height="130" Margin="38,0,0,0" VerticalAlignment="Top" Width="198" Source="/HKMonopoly;component/Assets/FailIcon.png" Opacity="0"/>
+            </Grid>
+            <Grid x:Name="PlayerFourInfoBox" Height="130" Margin="905,10,0,0" Width="280" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Grid.Background>
+                <TextBlock x:Name="PlayerFourName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Player 4" VerticalAlignment="Top" FontSize="24" FontFamily="UD Digi Kyokasho NP-B"/>
+                <Border BorderBrush="#FF37C900" BorderThickness="1" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="280"/>
+                <TextBlock x:Name="PlayerFourAccount" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Account :" VerticalAlignment="Top" FontSize="24" FontFamily="UD Digi Kyokasho N-R"/>
+                <TextBlock x:Name="PlayerFourIncome" HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="Income :" VerticalAlignment="Top" FontSize="24" FontFamily="UD Digi Kyokasho N-R"/>
+                <Image x:Name="PlayerFourFail" HorizontalAlignment="Left" Height="130" Margin="38,0,0,0" VerticalAlignment="Top" Width="198" Source="/HKMonopoly;component/Assets/FailIcon.png" Opacity="0"/>
+            </Grid>
+        </Grid>
+
+        <Image x:Name="PlayerOneMark" HorizontalAlignment="Left" Height="100" Margin="180,614,0,0" VerticalAlignment="Top" Width="100" Source="/HKMonopoly;component/Assets/PlayerOneMark.png"/>
+        <Image x:Name="PlayerTwoMark" HorizontalAlignment="Left" Height="100" Margin="486,614,0,0" VerticalAlignment="Top" Width="100" Source="/HKMonopoly;component/Assets/PlayerTwoMark.png"/>
+        <Image x:Name="PlayerThreeMark" HorizontalAlignment="Left" Height="100" Margin="786,614,0,0" VerticalAlignment="Top" Width="100" Source="/HKMonopoly;component/Assets/PlayerThreeMark.png"/>
+        <Image x:Name="PlayerFourMark" HorizontalAlignment="Left" Height="100" Margin="1080,614,0,0" VerticalAlignment="Top" Width="100" Source="/HKMonopoly;component/Assets/PlayerFourMark.png"/>
+        <TextBlock x:Name="TurnNumberBlock" Margin="1080,10,0,0" TextWrapping="Wrap" Text="Turn : 0/60" VerticalAlignment="Top" FontSize="36" Height="49" Width="260" HorizontalAlignment="Left" TextAlignment="Right" FontFamily="UD Digi Kyokasho N-R"/>
+        <TextBlock x:Name="DiceResultBlock" HorizontalAlignment="Left" Margin="1248,618,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" Text="3" FontFamily="UD Digi Kyokasho NP-B"/>
+        <TextBlock x:Name="DiceResult" Margin="1195,580,0,0" TextWrapping="Wrap" Text="Dice Result" VerticalAlignment="Top" FontSize="28" Height="38" HorizontalAlignment="Left" Width="155" FontFamily="UD Digi Kyokasho N-R"/>
+        <Canvas x:Name="BuildingCanvas" HorizontalAlignment="Left" Height="730" VerticalAlignment="Top" Width="1350" Margin="0,0,-0.286,0"/>
+
+        <Button x:Name="DiceButton" Content="" HorizontalAlignment="Left" Margin="486,130,0,0" VerticalAlignment="Top" Width="264" Height="264" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="DiceButton_Click" Opacity="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/HKMonopoly;component/Assets/DiceIcon.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="UnderstandButton" Content="" HorizontalAlignment="Left" Margin="486,130,0,0" VerticalAlignment="Top" Width="264" Height="264" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="DiceButton_Click" Opacity="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/HKMonopoly;component/Assets/Tick.png"/>
+            </Button.Background>
+        </Button>
+        <Canvas x:Name="MarkCanvas" HorizontalAlignment="Left" Height="730" VerticalAlignment="Top" Width="1350"/>
+        <TextBlock x:Name="GUIAnnouncement" HorizontalAlignment="Left" Margin="180,435,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="117" Width="864" FontSize="30" TextAlignment="Center" FontFamily="UD Digi Kyokasho N-R"/>
+        <Button x:Name="YesButton" Content="" HorizontalAlignment="Left" Margin="486,493,0,0" VerticalAlignment="Top" Width="100" Height="100" IsEnabled="False" Click="YesButton_Click" Opacity="0" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/HKMonopoly;component/Assets/Tick.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="NoButton" Content="" HorizontalAlignment="Left" Margin="678,493,0,0" VerticalAlignment="Top" Width="100" Height="100" IsEnabled="False" Click="NoButton_Click" Opacity="0" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/HKMonopoly;component/Assets/Cross.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="RobText" HorizontalAlignment="Left" Margin="778,516,0,0" TextWrapping="Wrap" Text="Rob!" VerticalAlignment="Top" Height="59" Width="126" FontSize="48" FontFamily="UD Digi Kyokasho NP-B" Opacity="0"/>
+
+    </Grid>
+
+</Page>
