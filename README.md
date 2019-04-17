@@ -27,6 +27,10 @@ This report is prepared by the group of Ho Tung Lam and Lam Kai Chun for the cou
 
 This project is written at C# language by Visual Studio. 
 
+#### Structure:
+![Screenshot](File/project_partII_Class_Design.png)
+
+
 #### Current created Mode:
 -	GUI mode, App Mode and Text Mode
 
@@ -47,3 +51,36 @@ This project is written at C# language by Visual Studio.
 - TestPage.xaml.cs
 - TextMode.xaml.cs
 
+### Screenshot
+#### Start Page
+<img src = "Image/HKMonopoly_Start.png" width = 75%, height = 75%>
+
+
+
+#### Select the number of players
+<img src = "Image/HKMonopoly_playerSelect.png" width = 75%, height = 75%>
+
+
+
+#### Dice rolling
+<img src = "Image/HKMonopoly_RollDice.png" width = 75%, height = 75%>
+
+
+
+#### Actual Game Play
+<img src = "Image/HKMonopoly_GamePlay.png" width = 75%, height = 75%>
+
+
+
+#### App Mode (1/4 of Main Window size)
+<img src = "Image/HKMonopoly_AppMode.png" width = 75%, height = 75%>
+
+
+
+#### Text Mode
+<img src = "Image/HKMonopoly_TextMode.png" width = 75%, height = 75%>
+
+
+
+#### Synchronization of three mode
+<img src = "Image/HKMonopoly_ThreeWindow%20Sync.png" width = 75%, height = 75%>
